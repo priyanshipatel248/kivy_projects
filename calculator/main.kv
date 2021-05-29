@@ -1,0 +1,170 @@
+Manager:
+    Calc:
+
+
+
+
+
+
+
+<Calc>:
+    name:'s1'
+    txt:txt
+    BoxLayout:
+        orientation: 'vertical'
+        spacing:3
+        padding:10
+        TextInput:
+            id:txt
+            multiline: False
+            readonly: True
+            font_size: 40
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing:3
+            padding:10
+
+            Button:
+                text:'Clear'
+                font_size:20
+                color:[1,1,1,1]
+                on_release:
+                    txt.text= ''
+            Button:
+                text: 'OFF'
+                font_size: 20
+                color: [1,1,1,1]
+                on_release:
+                    app.stop()
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing:3
+            padding:10
+
+
+            Button:
+                text: '7'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='7'
+
+            Button:
+                text: '8'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='8'
+
+            Button:
+                text: '9'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='9'
+
+            Button:
+                text: '+'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    root.process('+')
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing:3
+            padding:10
+            Button:
+                text: '4'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='4'
+
+            Button:
+                text: '5'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='5'
+
+            Button:
+                text: '6'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='6'
+
+            Button:
+                text: '-'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    root.process('-')
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing:3
+            padding:10
+            Button:
+                text: '1'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='1'
+
+            Button:
+                text: '2'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='2'
+
+            Button:
+                text: '3'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='3'
+            Button:
+                text: '*'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    root.process('*')
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing:3
+            padding:10
+            Button:
+                text: '.'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='.'
+
+            Button:
+                text: '0'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    txt.text+='0'
+
+            Button:
+                text: '='
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    root.res()
+
+            Button:
+                text: '/'
+                font_size: 30
+                color: 1,1,1,1
+                on_release:
+                    root.process('/')
+
+
